@@ -19,8 +19,8 @@ $brand-warning:   $orange;
 
 // Buttons & inputs' radius
 $border-radius-base:  15px;
-$border-radius-large: 2px;
-$border-radius-small: 2px;
+$border-radius-large: 6px;
+$border-radius-small: 6px;
 
 
 // Patch to make simple_form compatible with bootstrap 3
@@ -49,6 +49,45 @@ $border-radius-small: 2px;
 .custom-select.is-invalid ~ .invalid-tooltip {
   display: block;
 }
+
+.btn {
+  background: #333;
+  border: medium none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  height: 40px !important;
+  line-height: 40px !important;
+  padding: 0 20px !important;
+}
+
+.btn:hover, .btn:focus {
+  color: black;
+}
+
+h1 {
+  color: #333 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  font-family: 'Suisse Regular', sans-serif !important;
+}
+
+h2 {
+  color: #333 !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  font-family: 'Suisse Regular', sans-serif !important;
+}
+
+input {
+  font-family: 'Suisse Regular', sans-serif !important;
+  border-radius: 6px !important;
+  border-width: 0px !important;
+  line-height: unset !important;
+  font: black !important;
+  border: 1px solid #ccc !important;
+}
+
 
 // Override other variables below!
 

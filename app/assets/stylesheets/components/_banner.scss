@@ -1,31 +1,42 @@
 .banner {
-  color: white;
+  font-family: 'Suisse Regular', sans-serif !important;
+  color: black !important;
   text-align: center;
+  background-color: #FFFEF2;
   height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: row;
   filter: blur(px);
 }
 
-// img.animated {
-//   -webkit-animation: filter-animation 5s infinite;
-// }
 .banner h1 {
-  // font-family: Roboto;
-  // font-style: Thin Italic;
-  font-size: 50px;
+
+  font-size: 15px;
+  margin: 0px 20px 20px 20px !important;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
+
 .banner p {
-  // font-family: Roboto;
-  // font-style: Thin Italic;
-  font-size: 25px;
-  font-weight: lighter;
-  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: normal;
+  color: black;
   opacity: 0.6;
-  margin-bottom: 30px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.banner img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px !important;
+  height: auto;
+  max-width: 70% !important;
+  display: flex;
+  margin: 0px 20px 0px 0px !important;
 }

@@ -1,9 +1,9 @@
 <div class="container">
-<h1 class="page-header">My Gods</h1>
+<h1 class="page-header">My profiles</h1>
 <div>
   <% @gods.each do |god| %>
   <%= link_to god_path(god) do  %>
-    <%= cl_image_tag god.photo, height: 200, width: 300, crop: :fill, class:"rounded-image" %> 
+    <%= cl_image_tag god.photo, height: 200, width: 300, crop: :fill, class:"rounded-image" %>
   <% end %>
    <h3> Upcoming bookings for <%= god.name %></h3>
    <p> <% god.bookings.each do |booking| %> </p>

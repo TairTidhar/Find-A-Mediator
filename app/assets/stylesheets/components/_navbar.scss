@@ -1,32 +1,33 @@
 /* Main navbar */
-.navbar-wagon {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+.navbar {
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: auto;
+  font-family: 'Suisse Regular', sans-serif;
+  padding: 0;
+  margin-bottom: 0 !important;
+  background: transparent !important;
 }
 
 .search-form-hello {
   display: flex;
   justify-content: space-around;
   width: auto;
-  border-radius: 15px;
+  border-radius: 6px !important;;
+  font-family: 'Suisse Regular', sans-serif !important;
+  font-size: 12px !important;
+  outline: none !important;
+  input:focus{
+    outline:none !important;
+  }
 }
 
-/* Logo */
-.navbar-wagon-brand img {
-  display: flex;
-  height: 50px;
-  align-content: start;
-}
 
 /* Right section */
-.navbar-wagon-right {
+.navbar-right {
   display: flex;
   align-items: baseline;
   justify-content: center;
@@ -34,29 +35,30 @@
 }
 
 /* Basic navbar item */
-.navbar-wagon-item {
+.navbar-item {
   cursor: pointer;
   padding: 0 20px;
   width: auto;
 }
 
 /* Navbar link */
-.navbar-wagon-link {
-  color: #616668;
-  font-size: 14px;
+.navbar-link {
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
 }
-.navbar-wagon-link:hover {
-  color: #da552f;
-  text-decoration: none;
+.navbar-link:hover {
+  text-decoration: underline !important;
+  color: black !important;
 }
 
 /* Dropdown menu */
-.navbar-wagon-dropdown-menu {
+.navbar-dropdown-menu {
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
 }
-.navbar-wagon-dropdown-menu li > a {
+.navbar-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
   color: #999999 !important;
@@ -64,11 +66,11 @@
   line-height: 22px !important;
   padding: 10px 20px;
 }
-.navbar-wagon-dropdown-menu li > a:hover {
+.navbar-dropdown-menu li > a:hover {
   background: transparent !important;
   color: black !important;
 }
-.navbar-wagon-dropdown-menu:before {
+.navbar-dropdown-menu:before {
   content: ' ';
   height: 10px;
   width: 10px;

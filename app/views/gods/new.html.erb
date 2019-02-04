@@ -5,7 +5,7 @@
     <div class="col-sm-12 col-md-6 col-md-offset-3">
 
     <div class = "form-post">
-      <h2>Create a new God</h2>
+      <h2>Offer mediation services</h2>
     <%= simple_form_for(@god) do |f| %>
       <div class="row">
        <div class= "col-xs-6">
@@ -15,15 +15,12 @@
           <%= f.input :location, placeholder: "City"%>
        </div>
        <div class= "col-xs-6">
-          <%= f.input :price, placeholder: "Price" %>
-       </div>
-       <div class= "col-xs-6">
           <%= f.input :photo, placeholder: "Please upload photo" %>
           <%= f.input :photo_cache, as: :hidden %>
        </div>
        <div class= "col-xs-12">
           <div class="form-group">
-            <label class="control-label check_boxes optional">Power</label>
+            <label class="control-label check_boxes optional">Practice areas</label>
             <input type="hidden" name="god[power_ids][]" value="">
             <div class="power-choices">
               <% Power.all.each do |power| %>
@@ -37,10 +34,10 @@
           </div>
        </div>
        <div class= "col-xs-12">
-          <%= f.input :description, placeholder: "Description" %>
+          <%= f.input :description, placeholder: "Background and achievements" %>
        </div>
        <div class= "col-xs-12">
-          <%= f.button :submit, "Create a God", class: "btn btn-primary" %>
+          <%= f.button :submit, "Submit", class: "btn btn-primary" %>
       <% end %>
       </div>
     </div>

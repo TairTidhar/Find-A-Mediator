@@ -18,7 +18,7 @@
 
   margin-top: 50px;
 
-  border-radius: 20px;
+  border-radius: 6px;
   overflow: hidden;
   }
 
@@ -40,7 +40,7 @@
   img {
     max-width: 100%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 6px;
   }
 
   .godname {
@@ -61,21 +61,8 @@
   }
 }
 
-// .card-link {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   right: 0;
-//   width: 100%;
-//   z-index: 2;
-//   background: black;
-//   opacity: 0;
-// }
-// .card-link:hover {
-//   opacity: 0.1;
-// }
 
 .rounded-image {
-    border-radius: 20px;
+    border-radius: 6px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }

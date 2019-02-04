@@ -15,9 +15,9 @@
 @import "pages/index";
 
 body {
-  background: #ffffff;
+  background: #FFFEF2;
   color: #898989;
-  font-family: 'Poppins', helvetica;
+  font-family: 'Suisse Regular', sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 20px;
@@ -38,8 +38,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   color: #898989;
-  margin-bottom: 25px;
-  margin-top: 25px;
   padding: 0;
 }
 
@@ -92,20 +90,18 @@ p {
 }
 
 .btn {
-  background: #333;
-  border: medium none;
-  border-radius: 0;
-  color: #fff;
-  font-size: 16px;
-  height: 50px;
-  line-height: 50px;
-  padding: 0 30px;
-  text-transform: uppercase;
-  border-radius: 15px;
+  background: #333 !important;
+  border: medium none !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  padding: 0 30px !important;
+  border-radius: 15px !important;
 }
 
 .btn:hover, .btn:focus {
-  color: #fff;
+  background: black !important;
 }
 
 .page-header {
@@ -124,3 +120,4 @@ p {
   padding: 0 30px;
   margin-bottom: 100px;
 }
+
