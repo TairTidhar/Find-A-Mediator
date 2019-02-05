@@ -1,18 +1,18 @@
 <div class="container">
   <h1 class="page-header">Booking Confirmation</h1>
-  <div class="god">
+  <div class="mediator">
 
     <div class="row">
       <div class="col-md-5">
       </div>
       <div class="col-md-6">
-      <h1 class="text-left"><%= @booking.god.name %></h1>
+      <h1 class="text-left"><%= @booking.mediator.name %></h1>
       </div>
     </div>
 
       <div class="row">
         <div class="col-md-5">
-            <%= cl_image_tag @booking.god.photo, height: 300, width: 400, crop: :fill, class:"rounded-image" %>
+            <%= cl_image_tag @booking.mediator.photo, height: 300, width: 400, crop: :fill, class:"rounded-image" %>
         </div>
         <div class="col-md-6">
           <h4 class="text-left">Dates booked:</h4>
@@ -22,11 +22,11 @@
           <% total = ((end_date - start_date)/(60*60*24)).to_i%> </p>
 
           <h4 class="text-left">Total cost of booking:</h4>
-          <p class="text-left">$<%= total * @booking.god.price %>
+          <p class="text-left">$<%= total * @booking.mediator.price %>
           <h4 class="text-left">Booking location:</h4>
-          <p class="text-left"><%= @booking.god.location %></p>
-          <h4 class="text-left">About <%= @booking.god.name %>: </h4>
-          <p class="text-left"><%= @booking.god.description %></p>
+          <p class="text-left"><%= @booking.mediator.location %></p>
+          <h4 class="text-left">About <%= @booking.mediator.name %>: </h4>
+          <p class="text-left"><%= @booking.mediator.description %></p>
           <%= link_to "Download your PDF", "#{booking_path(@booking)}.pdf"  %>
         </div>
       </div>

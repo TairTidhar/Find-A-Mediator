@@ -2,18 +2,18 @@
 <div class="container">
   <h2></h2>
     <div class="row">
-      <% @gods.each do |god| %>
+      <% @mediators.each do |mediator| %>
         <div class="col-md-3">
-          <%= link_to god_path(god) do  %>
+          <%= link_to mediator_path(mediator) do  %>
             <div class= "card">
             <!-- <li class="card-item"> -->
-              <div class="godname">
-              <%=  god.name %>
+              <div class="mediatorname">
+              <%=  mediator.name %>
               </div>
               <div class="card-link">
               </div>
               <div>
-              <%= cl_image_tag god.photo, height: 500, width: 600, crop: :fill %>
+              <%= cl_image_tag mediator.photo, height: 500, width: 600, crop: :fill %>
               </div>
             </div>
           <% end %>

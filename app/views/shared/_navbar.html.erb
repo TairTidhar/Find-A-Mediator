@@ -4,16 +4,16 @@
 
     <% if user_signed_in? %>
 
-          <%= link_to "Find", gods_path, class: "navbar-item navbar-link" %>
-          <%= link_to "Offer services", new_god_path, class: "navbar-item navbar-link" %>
+          <%= link_to "Find", mediators_path, class: "navbar-item navbar-link" %>
+          <%= link_to "Offer services", new_mediator_path, class: "navbar-item navbar-link" %>
           <%= link_to "My services", owner_dashboard_path, class: "navbar-item navbar-link" %>
           <%= link_to "Bookings", dashboard_path, class: "navbar-item navbar-link" %>
           <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" %>
-            <%= form_tag gods_path, method: :get, class: "search-form-hello" do %>
+            <%= form_tag mediators_path, method: :get, class: "search-form-hello" do %>
             <%= text_field_tag 'search', nil, placeholder: 'Search by name' %>
           <% end %>
     <% else %>
-            <%= form_tag gods_path, method: :get, class: "search-form-hello" do %>
+            <%= form_tag mediators_path, method: :get, class: "search-form-hello" do %>
               <%= text_field_tag 'search', nil, placeholder: 'Search by name' %>
             <% end %>
           <%= link_to 'Login', new_user_session_path, class: "navbar-item navbar-link"%>

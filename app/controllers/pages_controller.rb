@@ -7,6 +7,6 @@ class PagesController < ApplicationController
   end
 
   def owner_dashboard
-    @gods = God.where(user_id: current_user.id)
+    @mediators = Mediator.where(user_id: current_user.id)
   end
 end

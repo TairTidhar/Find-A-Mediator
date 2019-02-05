@@ -6,7 +6,7 @@
 
     <div class = "form-post">
       <h2>Offer mediation services</h2>
-    <%= simple_form_for(@god) do |f| %>
+    <%= simple_form_for(@mediator) do |f| %>
       <div class="row">
        <div class= "col-xs-6">
           <%= f.input :name, placeholder: "Name" %>
@@ -21,11 +21,11 @@
        <div class= "col-xs-12">
           <div class="form-group">
             <label class="control-label check_boxes optional">Practice areas</label>
-            <input type="hidden" name="god[power_ids][]" value="">
+            <input type="hidden" name="mediator[power_ids][]" value="">
             <div class="power-choices">
               <% Power.all.each do |power| %>
-                <input type="checkbox" class="hidden" value="<%= power.id %>" name="god[power_ids][]" id="god_power_ids_<%= power.id %>">
-                <label class="power-choice" for="god_power_ids_<%= power.id %>">
+                <input type="checkbox" class="hidden" value="<%= power.id %>" name="mediator[power_ids][]" id="mediator_power_ids_<%= power.id %>">
+                <label class="power-choice" for="mediator_power_ids_<%= power.id %>">
                   <%= power.name %>
                   <i class="fa fa-check"></i>
                 </label>

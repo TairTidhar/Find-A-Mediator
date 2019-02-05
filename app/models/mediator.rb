@@ -1,4 +1,4 @@
-class God < ApplicationRecord
+class Mediator < ApplicationRecord
 
   include PgSearch
   pg_search_scope :global_search,
@@ -6,9 +6,9 @@ class God < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-  has_many :god_powers, dependent: :destroy
-  has_many :powers, through: :god_powers
-  
+  has_many :mediator_powers, dependent: :destroy
+  has_many :powers, through: :mediator_powers
+
   has_many :bookings, dependent: :destroy
 
   belongs_to :user

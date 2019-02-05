@@ -19,23 +19,23 @@ ActiveRecord::Schema.define(version: 2018_11_15_050959) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.bigint "user_id"
-    t.bigint "god_id"
+    t.bigint "mediator_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["god_id"], name: "index_bookings_on_god_id"
+    t.index ["mediator_id"], name: "index_bookings_on_mediator_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  create_table "god_powers", force: :cascade do |t|
+  create_table "mediator_powers", force: :cascade do |t|
     t.bigint "power_id"
-    t.bigint "god_id"
+    t.bigint "mediator_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["god_id"], name: "index_god_powers_on_god_id"
-    t.index ["power_id"], name: "index_god_powers_on_power_id"
+    t.index ["mediator_id"], name: "index_mediator_powers_on_mediator_id"
+    t.index ["power_id"], name: "index_mediator_powers_on_power_id"
   end
 
-  create_table "gods", force: :cascade do |t|
+  create_table "mediators", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.string "description"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2018_11_15_050959) do
     t.datetime "updated_at", null: false
     t.string "photo"
     t.integer "price"
-    t.index ["user_id"], name: "index_gods_on_user_id"
+    t.index ["user_id"], name: "index_mediators_on_user_id"
   end
 
   create_table "pg_search_documents", force: :cascade do |t|
@@ -75,9 +75,9 @@ ActiveRecord::Schema.define(version: 2018_11_15_050959) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "bookings", "gods"
+  add_foreign_key "bookings", "mediators"
   add_foreign_key "bookings", "users"
-  add_foreign_key "god_powers", "gods"
-  add_foreign_key "god_powers", "powers"
-  add_foreign_key "gods", "users"
+  add_foreign_key "mediator_powers", "mediators"
+  add_foreign_key "mediator_powers", "powers"
+  add_foreign_key "mediators", "users"
 end

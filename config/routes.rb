@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-	resources :gods do
+	resources :mediators do
 		resources :bookings, only: [ :new, :create]
-		resources :god_powers, only: [ :new, :create]
+		resources :mediator_powers, only: [ :new, :create]
   end
 
   resources :bookings, only: :show

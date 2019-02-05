@@ -1,19 +1,19 @@
 class BookingsController < ApplicationController
   def new
-    @god = God.find(params[:god_id])
+    @mediator = Mediator.find(params[:mediator_id])
     @booking = Booking.new
   end
 
   def create
-    @god = God.find(params[:god_id])
+    @mediator = Mediator.find(params[:mediator_id])
     @booking = Booking.new(booking_params)
-    @booking.god = @god
+    @booking.mediator = @mediator
     @booking.user = current_user
 
     if @booking.save
       redirect_to booking_path(@booking), notice: 'Your booking is confirmed. Check your inbox - you will recieve an email with the details'
     else
-      render "gods/show"
+      render "mediators/show"
     end
   end
 

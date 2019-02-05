@@ -1,0 +1,41 @@
+
+<div class="container-mediator">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="padding-image">
+            <%= cl_image_tag @mediator.photo, height: 300, width: 400, crop: :fill, class:"rounded-image" %>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <h1><%= @mediator.name %></h1>
+        <h4> Located in <%= @mediator.location %></h4>
+        <h4> <%= @mediator.description %></h4>
+        <h4>Practice area:
+        <% @mediator.powers.each do |power| %>
+          <%= power.name %>
+        <% end %>
+        </h4>
+
+        <% if current_user %>
+          <div class="buttons">
+            <p>
+              <%= link_to "Remove mediator", mediator_path(@mediator), method: :delete, class: "btn btn-primary"%>
+              <%= link_to "Update mediator", edit_mediator_path(@mediator), class: "btn btn-primary" %>
+              <% end %>
+            </p>
+          </div>
+
+
+          <h2> Book a session with <%= @mediator.name %></h2>
+          <%= simple_form_for([@mediator, @booking]) do |f| %>
+<!--           <div class="col-md-6">
+ -->      <%= f.input :start_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+          <%= f.input :end_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+
+          <%= f.button :submit, "Make a booking", class: "mediator-show-button btn btn-primary"%>
+
+          <% end %>
+  </div>
+</div>
+</div>

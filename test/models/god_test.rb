@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GodTest < ActiveSupport::TestCase
+class MediatorTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

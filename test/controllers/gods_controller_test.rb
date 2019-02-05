@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GodsControllerTest < ActionDispatch::IntegrationTest
+class MediatorsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
